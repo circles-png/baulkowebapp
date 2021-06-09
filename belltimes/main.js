@@ -3,7 +3,7 @@ var day = newday.getDay();
 var currentsec = newday.getHours() * 3600 + newday.getMinutes() * 60 + newday.getSeconds();
 var daydata;
 var numberofperiods;
-var table = "<table class='table my-5'>";
+var table = "<table class='table my-5 fs-4'>";
 var periodtimename = [];
 var theme = 0;
 var weekend = 1;
@@ -105,13 +105,13 @@ function displaystartandfinishtime() {
 function writetotable() {
     if (weekend == 0) {
         //first row
-        table = table + "<tr><td>" + daydata.period[0] + "</td><td>" + periodtimename[0] + "</td><td><div class='progressblock'><div class='progress'><div class='progress-bar'><div class='textbar'><p class='progresstext m-2'></p></div></div></div></div></td></tr>";
+        table = table + "<tr><td>" + daydata.period[0] + "</td><td>" + periodtimename[0] + "</td><td><div class='progressblock'><div class='progress' style='height: 30px;'><div class='progress-bar'><div class='textbar'><p class='progresstext m-2 fs-5'></p></div></div></div></div></td></tr>";
         //all rows
         for (a = 1; a < numberofperiods - 1; a++) {
-            table = table + "<tr><td>" + daydata.period[a] + "</td><td>" + periodtimename[a] + "</td><td><div class='progressblock'><div class='progress'><div class='progress-bar'><div class='textbar'><p class='progresstext m-2'></p></div></div></div></div></td></tr>";
+            table = table + "<tr><td>" + daydata.period[a] + "</td><td>" + periodtimename[a] + "</td><td><div class='progressblock'><div class='progress' style='height: 30px;'><div class='progress-bar'><div class='textbar'><p class='progresstext m-2 fs-5'></p></div></div></div></div></td></tr>";
         }
         //last row
-        table = table + "<tr><td>" + daydata.period[numberofperiods - 1] + "</td><td>" + periodtimename[numberofperiods - 1] + "</td><td><div class='progressblock'><div class='progress'><div class='progress-bar'><div class='textbar'><p class='progresstext m-2'></p></div></div></div></div></td></tr>";
+        table = table + "<tr><td>" + daydata.period[numberofperiods - 1] + "</td><td>" + periodtimename[numberofperiods - 1] + "</td><td><div class='progressblock'><div class='progress' style='height: 30px;'><div class='progress-bar'><div class='textbar'><p class='progresstext m-2 fs-5'></p></div></div></div></div></td></tr>";
         table += "</table>";
         document.getElementById("tableclass").innerHTML = table;
     }
@@ -153,7 +153,7 @@ function updateprogress() {
         }
         for (a = 0; a < daydata.period.length - 2; a++) {
             if (currentsec > (daydata.times[2 * a + 1] * 60)) {
-                document.getElementsByClassName("progresstext")[a + 1].innerHTML = "Finished!"
+                document.getElementsByClassName("progresstext")[a + 1].innerHTML = "period finished!"
             }
             else if (currentsec < (daydata.times[2 * a] * 60)) {
                 document.getElementsByClassName("progresstext")[a + 1].innerHTML = "";
@@ -177,7 +177,7 @@ function updateprogress() {
             document.getElementsByClassName("progresstext")[0].innerHTML = "not even school yet";
         }
         if (currentsec > (daydata.times[daydata.period.length - 1] * 60)) {
-            document.getElementsByClassName("progresstext")[daydata.period.length - 1].innerHTML = "School Ended!";
+            document.getElementsByClassName("progresstext")[daydata.period.length - 1].innerHTML = "school ended";
         }
         else {
             document.getElementsByClassName("progresstext")[daydata.period.length - 1].innerHTML = "";

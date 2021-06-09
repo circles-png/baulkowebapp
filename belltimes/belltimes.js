@@ -61,7 +61,7 @@ var belltimes = {
             "Period 5",
             "Lunch 1",
             "Lunch 2",
-            "Sport",
+            "Sport (Years 8-12)",
             "Period 6",
             "Period 7",
             "Period 8",
