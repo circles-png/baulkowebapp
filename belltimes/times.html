@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Baulkham Hills High School - Bell Times and more - by Matthew Li">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Baulko - Home</title>
+</head>
+
+<body class="d-flex flex-column">
+    <h1 class="d-flex justify-content-center p-4">Baulko - Bell Times</h1>
+
+    <ul class="list-group list-group-horizontal justify-content-center text-center px-5">
+        <button class="list-group-item list-group-item-action p-2 fs-5"
+            onclick='window.location.href = "../index.html";'>Home</button>
+        <li class="list-group-item list-group-item-action active p-2 fs-5">Bell Times (WIP)</li>
+        <button class="list-group-item list-group-item-action p-2 fs-5"
+            onclick='window.location.href = "../feedback.html";'>Feedback</button>
+    </ul>
+
+    <div>
+
+        <span id="Sydney_z60b" class="clock"></span>
+        <script src="time.js"></script>
+        <script>
+            time_is_widget.init({
+                Sydney_z60b: {
+                    template: "TIME<br>DATE",
+                    time_format: "12hours:minutes:seconds AMPM",
+                    date_format: "dayname, dnum monthname year"
+                }
+            });
+        </script>
+    </div>
+
+    <span style="clear:both; display:block; height: 15px;"></span>
+
+    <div class="tableclass" id="tableclass"></div>
+    <table class="tablenojs">
+        <tbody>
+            <tr>
+                <th></th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Period</th>
+            </tr>
+            <tr>
+                <th>Bell Warning</th>
+                <td>8:38 am</td>
+                <td>8:38 am</td>
+                <td>8:38 am</td>
+                <td>8:38 am</td>
+                <td>8:38 am</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Roll call</th>
+                <td>Roll Assembly 8:40 am to 8:44 am</td>
+                <td>Roll 8:40 am</td>
+                <td>Roll 8:40 am</td>
+                <td>Roll 8:40 am</td>
+                <td>Roll 8:40 am</td>
+                <td>Roll</td>
+            </tr>
+            <tr>
+                <th>1</th>
+                <td>Period 1 - 9:18 am</td>
+                <td>Period 1 - 8:44 am</td>
+                <td>Period 1 - 8:44 am</td>
+                <td>Period 1 - 8:44 am</td>
+                <td>Period 1 - 8:44 am</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td>Period 2 - 9:54 am</td>
+                <td>Period 2 - 9:26 am</td>
+                <td>Period 2 - 9:23 am</td>
+                <td>Period 2 - 9:26 am</td>
+                <td>Period 2 - 9:23 am</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <th>RECESS</th>
+                <td>10:30 am</td>
+                <td>10:06 am</td>
+                <td>9:59 am</td>
+                <td>10:06 am</td>
+                <td>10:01 am</td>
+                <td>Recess</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td>10:50 am</td>
+                <td>10:26 am</td>
+                <td>10:14 am</td>
+                <td>10:26 am</td>
+                <td>10:26 am</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td>11:26 am</td>
+                <td>11:06 am</td>
+                <td>10:51 am</td>
+                <td>11:06 am</td>
+                <td>11:06 am</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <th>Break</th>
+                <td>12:02 pm</td>
+                <td>11:46 am</td>
+                <td>No Break</td>
+                <td>11:46 am</td>
+                <td>11:46 am</td>
+                <td>Break</td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td>12:07 pm</td>
+                <td>11:51 am</td>
+                <td>11:28 am</td>
+                <td>11:51 am</td>
+                <td>11:51 am</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td>12:43 pm</td>
+                <td>12:31 pm</td>
+                <td>Sport 12:30 pm</td>
+                <td>12:31 pm</td>
+                <td>12:31 pm</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <th>Lunch 1</th>
+                <td>1:19 pm</td>
+                <td>1:11 pm</td>
+                <td>12:05 pm</td>
+                <td>1:11 pm</td>
+                <td>1:11 pm</td>
+                <td>Lunch 1</td>
+            </tr>
+            <tr>
+                <th>Lunch 2</th>
+                <td>1:37 pm</td>
+                <td>1:29 pm</td>
+                <td>12:20 pm</td>
+                <td>1:29 pm</td>
+                <td>1:29 pm</td>
+                <td>Lunch 2</td>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td>1:54 pm</td>
+                <td>1:46 pm</td>
+                <td>Period 6 12:31 pm, Period 7 1:11 pm</td>
+                <td>1:46 pm</td>
+                <td>1:46 pm</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <th>8</th>
+                <td>2:30 pm</td>
+                <td>2:26 pm</td>
+                <td>Period 8 1:50 pm</td>
+                <td>2:26 pm</td>
+                <td>2:26 pm</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <th>End</th>
+                <td>3:06 pm</td>
+                <td>3:06 pm</td>
+                <td>2:30 pm</td>
+                <td>3:06 pm</td>
+                <td>3:06 pm</td>
+                <td>End</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="belltimes.js">
+    </script>
+    <script src="main.js">
+    </script>
+
+    <div id="footer" class="fixed-bottom">
+        <footer class="d-flex justify-content-center text-center">By Matthew Li &copy; 2021 :D</footer>
+        <footer class="d-flex justify-content-center text-center">This website is in no way affiliated with Baulkham
+            Hills High School.</footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
