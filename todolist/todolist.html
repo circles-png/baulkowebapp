@@ -1,43 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Simple Bootstrap To-Do List Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="todolist.css">
+    <script src="todolist.js"></script>
 
-
-    <link rel="stylesheet" href="css/style.css">
-
-
+    <title>Baulko - To-do List</title>
 </head>
 
-<body>
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<body class="d-flex flex-column">
+    <h1 class="d-flex justify-content-center p-4">To-do List</h1>
 
-    <body>
-        <div class="form-group">
-            <h1>To-Do <small>List</small></h1>
-            <form role="form">
-                <input type="text" class="form-control" placeholder="Your Task" name="task">
-            </form>
-            <button type="button" class="btn btn btn-primary">Add</button>
+    <ul class="list-group list-group-horizontal justify-content-center text-center px-5">
+        <button class="list-group-item list-group-item-action p-2 fs-5"
+            onclick='window.location.href = "../index.html";'>Home</button>
+        <button class="list-group-item list-group-item-action p-2 fs-5"
+            onclick='window.location.href = "../belltimes/times.html";'>Bell Times</button>
+        <button class="list-group-item list-group-item-action p-2 fs-5"
+            onclick='window.location.href = "../feedback.html";'>Feedback</button>
+        <li class="list-group-item list-group-item-action active p-2 fs-5">To-Do List</li>
+
+    </ul>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-white">
+                    <div class="card-body">
+                        <form action="javascript:void(0);">
+                            <input type="text" class="form-control add-task" placeholder="New Task...">
+                        </form>
+                        <ul class="nav nav-pills todo-nav">
+                            <li role="presentation" class="nav-item all-task active"><a href="#"
+                                    class="nav-link">All</a>
+                            </li>
+                            <li role="presentation" class="nav-item active-task"><a href="#" class="nav-link">Active</a>
+                            </li>
+                            <li role="presentation" class="nav-item completed-task"><a href="#"
+                                    class="nav-link">Completed</a></li>
+                        </ul>
+                        <div class="todo-list">
+                            <div class="todo-item">
+                                <div class="checker"><span class=""><input type="checkbox"></span></div>
+                                <span>Add more tasks!</span>
+                                <a href="javascript:void(0);" class="float-right remove-todo-item"><i
+                                        class="icon-close"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div></div>
-        <ul class="list-unstyled" id="todo"></ul>
-    </body>
+    </div>
 
-
-
-
-    <script src="js/index.js"></script>
-
-
-
-
+    <div id="footer" class="fixed-bottom">
+        <footer class="d-flex justify-content-center text-center">By Matthew Li &copy; 2021 :D</footer>
+        <footer class="d-flex justify-content-center text-center">This website is in no way affiliated with Baulkham
+            Hills High School.</footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
