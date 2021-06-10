@@ -1,42 +1,16 @@
-body{
-    background-color:#EEEEEE;
+/*Downloaded from https://www.codeseek.co/RonaldsVilcins/simple-bootstrap-to-do-list-template-iJxGB */
+form {
+    display: inline-block;
 }
-.todolist{
-    background-color:#FFF;
-    padding:20px 20px 10px 20px;
-    margin-top:30px;
+.form-group {
+    text-align: center;
+    padding-bottom: 25px;
 }
-.todolist h1{
-    margin:0;
-    padding-bottom:20px;
-    text-align:center;
-}
-.form-control{
-    border-radius:0;
-}
-li.ui-state-default{
-    background:#fff;
-    border:none;
-    border-bottom:1px solid #ddd;
+#todo {
+    margin: 0 auto;
+    width: 500px;
 }
 
-li.ui-state-default:last-child{
-    border-bottom:none;
-}
-
-.todo-footer{
-    background-color:#F4FCE8;
-    margin:0 -20px -10px -20px;
-    padding: 10px 20px;
-}
-#done-items li{
-    padding:10px 0;
-    border-bottom:1px solid #ddd;
-    text-decoration:line-through;
-}
-#done-items li:last-child{
-    border-bottom:none;
-}
-#checkAll{
-    margin-top:10px;
+a.close {
+  float: right;
 }
