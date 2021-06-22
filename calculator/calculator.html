@@ -5,17 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
-        crossorigin="anonymous"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="cpstest.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700">
-    <script src="cpstest.js"></script>
-
-    <title>Baulko - Bell Times</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="calculator.css">
+    <script src="calculator.js"></script>
+    <title>Baulko - Calculator</title>
 </head>
 
 <body class="d-flex flex-column">
@@ -30,24 +28,24 @@
             onclick='window.location.href = "../feedback.html";'>Feedback</button>
         <button class="list-group-item list-group-item-action p-2 fs-5"
             onclick='window.location.href = "../todolist/todolist.html";'>To-Do List</button>
-        <li class="list-group-item list-group-item-action active p-2 fs-5">CPS Test</li>
+        <li class="list-group-item list-group-item-action active p-2 fs-5">Calculator</li>
     </ul>
 
-    <div class="d-flex container justify-content-center">
-        <main x-data="clickSpeedTest()" x-init="restart()">
-            <header>
-                <p> <span><abbr title="Clicks Per Second">CPS</abbr></span><br /><b x-text="cpsDisplay"></b></p>
-                <div></div>
-                <p> <span>CPS MAX</span><br /><b x-text="cpsMaxDisplay"></b></p>
-            </header><button x-ref="btn" @mousedown="mouseDown" @mouseup="mouseUp" :style="`--cps: ${cps}`"></button>
-            <footer>
-                <p> <span>Clicks</span><br /><b x-text="clicks"></b></p>
-                <div></div>
-                <p> <span>Time</span><br /><b x-text="activeTimeDisplay"></b><sub>s</sub></p>
-            </footer>
-        </main>
+    <div class="container-sm calculator my-5 border border-primary border-5 rounded">
+        <div class="row row-cols-auto my-4 d-flex justify-content-center">
+            <div class="col"><button class="btn btn-outline-dark p-2 px-3">7</button></div>
+            <div class="col"><button class="btn btn-outline-dark p-2 px-3">8</button></div>
+            <div class="col"><button class="btn btn-outline-dark p-2 px-3">9</button></div>
+            <div class="col"><button class="btn btn-outline-dark p-2 px-3">C</div>
+            <div class="w-100"></div>
+            <div class="col"><button class="btn btn-outline-dark p-2 px-3">4</button></div>
+            <div class="col"><button class="btn btn-outline-dark p-2 px-3">5</button></div>
+            <div class="col"><button class="btn btn-outline-dark p-2 px-3">6</button></div>
+            <div class="col"><button class="btn btn-outline-dark p-2 px-3"><i class="fas fa-plus"></i></button></div>
+        </div>
     </div>
-    <div id="footer" class="fixed-bottom">
+
+    <div id="footer" class="footer">
         <footer class="d-flex justify-content-center text-center">By Matthew Li &copy; 2021 :D</footer>
         <footer class="d-flex justify-content-center text-center">This website is in no way affiliated with Baulkham
             Hills High School.</footer>
