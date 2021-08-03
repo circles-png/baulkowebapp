@@ -1,6 +1,23 @@
 body {
-    background-image: url("images/court_image.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  padding-top: 150px;
+  height: 100%;
+  width: 100%;
+  background-image: url("images/court_image.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+html {
+  height: 100%;
+}
+
+img#orange {
+  width: 18%;
+}
+
+* {
+  box-sizing: border-box;
 }
