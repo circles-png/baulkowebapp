@@ -7,27 +7,48 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="global.css"/>
 
     <title>Baulko - Feedback</title>
 </head>
 
 <body class="d-flex flex-column">
-    <h1 class="d-flex justify-content-center p-4">Feedback</h1>
+    <span class="text-center d-flex justify-content-center">
+        <h1 class="d-flex justify-content-center p-4 text-light bg-dark rounded display-5">Feedback</h1>
+    </span>
 
-    <ul class="list-group list-group-horizontal-sm justify-content-center text-center px-5">
-        <button class="list-group-item list-group-item-action p-2 fs-5"
-            onclick='window.location.href = "index.html";'>Home</button>
-        <button class="list-group-item list-group-item-action p-2 fs-5"
-            onclick='window.location.href = "belltimes/times.html";'>Bell Times</button>
-        <li class="list-group-item list-group-item-action p-2 fs-5 active">Feedback</li>
-        <button class="list-group-item list-group-item-action p-2 fs-5"
-            onclick='window.location.href = "todolist/todolist.html";'>To-Do List</button>
-        <button class="list-group-item list-group-item-action p-2 fs-5"
-            onclick='window.location.href = "calculator/calculator.html";'>Calculator</button>
-    </ul>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand text-center" href="">
+                <h1 id='baulko' class='display-5'>Baulko</h1><img src="images/untitled.png" alt="Baulko Logo"
+                    id='orange'>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="d-flex justify-content-end float-right float-end">
+                    <ul class="list-group list-group-horizontal-sm text-center px-5">
+                        <li class="list-group-item p-3 fs-5 bg-dark">
+                            <a class="text-decoration-none link-light" href="../index.html">Home</a>
+                        </li>
+                        <li class="list-group-item p-3 fs-5 bg-dark">
+                            <a class="text-decoration-none link-light" href="../belltimes/times.html">Bell Times</a>
+                        </li>
+                        <li class="list-group-item active p-3 fs-5">Feedback</li>
+                        <li class="list-group-item p-3 fs-5 bg-dark">
+                            <a class="text-decoration-none link-light" href="../todolist/todolist.html">To-Do List</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-    <h4 class="d-flex justify-content-center text-center p-1">Let me know what you want to see on the website!</h4>
-    <button class="flex-wrap btn btn-outline-primary btn-lg container"
+    <span class="text-center d-flex justify-content-center">
+        <h4 class="d-flex justify-content-center text-center p-1 text-light bg-dark rounded">Let me know what you want to see on the website!</h4>
+    </span>
+    <button class="flex-wrap btn btn-outline-primary btn-lg container text-primary bg-dark rounded"
         onclick='window.location.href = "https\://docs.google.com/forms/d/148I2hSFAjJxvJ9Kh7Zof2wQZ7NYBt5eweYalRe9ZXFY/";'>Feedback
         Form</button>
     <div id="footer" class="footer">
