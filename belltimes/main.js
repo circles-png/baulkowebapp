@@ -3,7 +3,7 @@ var day = newday.getDay();
 var currentsec = newday.getHours() * 3600 + newday.getMinutes() * 60 + newday.getSeconds();
 var daydata;
 var numberofperiods;
-var table = "<table class='table my-5 fs-6'><caption>Code by: Matthew Wu :3</caption>";
+var table = "<table class='table my-5 fs-6 text-light rounded'><caption>Code by: Matthew Wu :3</caption>";
 var periodtimename = [];
 var theme = 0;
 var weekend = 1;
@@ -186,14 +186,4 @@ function updateprogress() {
     else {
         weekend = 1;
     }
-}
-
-function button_light() {
-    document.getElementsByTagName("body")[0].classList.add("theme_light");
-    document.getElementsByTagName("body")[0].classList.remove("theme_dark");
-}
-
-function button_dark() {
-    document.getElementsByTagName("body")[0].classList.add("theme_dark");
-    document.getElementsByTagName("body")[0].classList.remove("theme_light");
 }

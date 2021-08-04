@@ -7,42 +7,46 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="../global.css">
 
     <title>Baulko - Bell Times</title>
 </head>
 
 <body class="d-flex flex-column">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand text-center" href="">
+                <h1 id='baulko' class='display-5'>Baulko</h1><img src="../images/untitled.png" alt="Baulko Logo"
+                    id='orange'>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="d-flex justify-content-end float-right float-end">
+                    <ul class="list-group list-group-horizontal-sm text-center px-5">
+                        <li class="list-group-item p-3 fs-5 bg-dark">
+                            <a class="text-decoration-none link-light" href="../index.html">Home</a>
+                        </li>
+                        <li class="list-group-item active p-3 fs-5">Bell Times</li>
+                        <li class="list-group-item p-3 fs-5 bg-dark">
+                            <a class="text-decoration-none link-light" href="../feedback.html">Feedback</a>
+                        </li>
+                        <li class="list-group-item p-3 fs-5 bg-dark">
+                            <a class="text-decoration-none link-light" href="../todolist/todolist.html">To-Do List</a>
+                        </li>
+                        <li class="list-group-item p-3 fs-5 bg-dark">
+                            <a class="text-decoration-none link-light" href="../calculator/calculator.html">Calculator</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <h1 class="d-flex justify-content-center p-4">Baulko - Bell Times</h1>
 
-    <ul class="list-group list-group-horizontal-sm justify-content-center text-center px-5">
-        <button class="list-group-item list-group-item-action p-2 fs-5"
-            onclick='window.location.href = "../index.html";'>Home</button>
-        <li class="list-group-item list-group-item-action active p-2 fs-5">Bell Times</li>
-        <button class="list-group-item list-group-item-action p-2 fs-5"
-            onclick='window.location.href = "../feedback.html";'>Feedback</button>
-        <button class="list-group-item list-group-item-action p-2 fs-5"
-            onclick='window.location.href = "../todolist/todolist.html";'>To-Do List</button>
-        <button class="list-group-item list-group-item-action p-2 fs-5"
-            onclick='window.location.href = "../calculator/calculator.html";'>Calculator</button>
-    </ul>
-
-    <div>
-        <span id="Sydney_z60b" class="clock"></span>
-        <script src="time.js"></script>
-        <script>
-            time_is_widget.init({
-                Sydney_z60b: {
-                    template: "TIME<br>DATE",
-                    time_format: "12hours:minutes:seconds AMPM",
-                    date_format: "dayname, dnum monthname year"
-                }
-            });
-        </script>
-    </div>
-
-    <span style="clear:both; display:block; height: 15px;"></span>
-
-    <div class="tableclass" id="tableclass"></div>
+    <div class="tableclass bg-dark text-light" id="tableclass"></div>
     <table class="tablenojs">
         <tbody>
             <tr>
@@ -197,7 +201,7 @@
     <script src="main.js">
     </script>
 
-    <div id="footer" class="footer">
+    <div id="footer" class="footer text-light bg-dark">
         <footer class="d-flex justify-content-center text-center">By Matthew Li &copy; 2021 :D</footer>
         <footer class="d-flex justify-content-center text-center">This website is in no way affiliated with Baulkham
             Hills High School.</footer>
