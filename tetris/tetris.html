@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tetris</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="tetris.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body class="bg-dark text-light container-fluid">
+    <div class="clr position-absolute container-fluid top-50 start-50 translate-middle d-flex justify-content-center">
+        <canvas width="200" height="400" id="game" class="left border rounded p-2 mx-3">If you can read this, your
+            browser doesn't support the
+            canvas element. Please upgrade to a better browser.</canvas>
+        <canvas width="100" height="450" id="info" class="left border rounded p-2 mx-3"></canvas>
+        <ul class="border rounded p-2 mx-3 display-6 fs-4 list-group bg-dark">
+            <li class="list-group-item bg-dark text-light">
+                <kbd class="bg-light text-dark my-4">&#8592;</kbd> and <kbd class="bg-light text-dark">&#8594;</kbd> to move
+            </li>
+            <li class="list-group-item bg-dark text-light">
+                <kbd class="bg-light text-dark my-4">&#8593;</kbd> to rotate
+            </li>
+            <li class="list-group-item bg-dark text-light">
+                <kbd class="bg-light text-dark my-4">&#8595;</kbd> to drop
+            </li>
+            <li class="list-group-item bg-dark text-light">
+                <kbd class="bg-light text-dark my-4">P</kbd> to pause
+            </li>
+        </ul>
+    </div>
+    <script src="tetris.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
