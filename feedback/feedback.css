@@ -1,0 +1,24 @@
+body {
+    padding-top: 150px;
+    height: 100%;
+    width: 100%;
+    background-image: url("../images/school_image.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
+  }
+  
+  html {
+    height: 100%;
+  }
+  
+  img#orange {
+    width: 18%;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
