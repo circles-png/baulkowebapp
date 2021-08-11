@@ -433,7 +433,7 @@ if (1) {
         lines: 0,
 
         dropCount: 0,
-        dropDelay: 24,
+        dropDelay: 16,
         
 
         init: function () {
