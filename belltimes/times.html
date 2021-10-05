@@ -7,6 +7,8 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../global.css">
     <link rel="icon" href="../favicon.ico">
 
@@ -14,36 +16,15 @@
 </head>
 
 <body class="d-flex flex-column">
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand text-center" href="">
-                <h1 id='baulko' class='display-5'>Baulko</h1><img src="../images/untitled.png" alt="Baulko Logo"
-                    id='orange'>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="d-flex justify-content-end float-right float-end">
-                    <ul class="list-group list-group-horizontal-sm text-center px-5">
-                        <li class="list-group-item p-3 fs-5 bg-dark">
-                            <a class="text-decoration-none link-light" href="../index.html">Home</a>
-                        </li>
-                        <li class="list-group-item active p-3 fs-5">Bell Times</li>
-                        <li class="list-group-item p-3 fs-5 bg-dark">
-                            <a class="text-decoration-none link-light" href="../feedback/feedback.html">Feedback</a>
-                        </li>
-                        <li class="list-group-item p-3 fs-5 bg-dark">
-                            <a class="text-decoration-none link-light" href="../todolist/todolist.html">To-Do List</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <div id="nav"></div>
+    <script src="../nav/nav.js">
+    </script>
 
-    <h1 class="d-flex justify-content-center p-4">Baulko - Bell Times (lockdown)</h1>
-
+    <span class="text-center d-flex justify-content-center">
+        <h1 class="d-flex p-3 my-5 rounded justify-content-center fs-1 text-light bg-dark text-center">
+            Bell Times (lockdown)
+        </h1>
+    </span>
     <div class="tableclass bg-dark text-light" id="tableclass"></div>
     <table class="tablenojs">
         <tbody>
@@ -200,7 +181,7 @@
     </script>
 
     <div id="footer" class="footer text-light bg-dark">
-        <footer class="d-flex justify-content-center text-center">By Matthew Li &copy; 2021 :D</footer>
+        <footer class="d-flex justify-content-center text-center">By Matthew Li 2021 :D</footer>
         <footer class="d-flex justify-content-center text-center">This website is in no way affiliated with Baulkham
             Hills High School.</footer>
     </div>
