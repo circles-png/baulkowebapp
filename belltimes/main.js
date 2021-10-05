@@ -1,4 +1,4 @@
-import { belltimes } from "belltimeslockdown.js";
+/* global belltimes */ 
 
 var newday = new Date();
 var day = newday.getDay();
