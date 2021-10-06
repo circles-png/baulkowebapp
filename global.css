@@ -1,13 +1,15 @@
 body {
   padding-top: 150px;
-  height: 100%;
-  width: 100%;
+  position: static;
   background-image: url("images/court_image.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+  overflow-x: hidden;
+  backface-visibility: hidden;
 }
 
 html {

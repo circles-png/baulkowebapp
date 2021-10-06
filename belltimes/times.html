@@ -16,16 +16,15 @@
 </head>
 
 <body class="d-flex flex-column">
-    <div id="nav"></div>
-    <script src="../nav/nav.js">
-    </script>
+    <iframe title="nav" src="..\nav\nav.html"
+        onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
 
     <span class="text-center d-flex justify-content-center">
         <h1 class="d-flex p-3 my-5 rounded justify-content-center fs-1 text-light bg-dark text-center">
             Bell Times (lockdown)
         </h1>
     </span>
-    <div class="tableclass bg-dark text-light" id="tableclass"></div>
+    <div class="tableclass rounded-3 mx-4 bg-dark text-light" id="tableclass"></div>
     <table class="tablenojs">
         <tbody>
             <tr>
@@ -175,20 +174,15 @@
         </tbody>
     </table>
 
+    
     <script src="belltimeslockdown.js">
     </script>
     <script src="main.js">
     </script>
 
-    <div id="footer" class="footer text-light bg-dark">
-        <footer class="d-flex justify-content-center text-center">By Matthew Li 2021 :D</footer>
-        <footer class="d-flex justify-content-center text-center">This website is in no way affiliated with Baulkham
-            Hills High School.</footer>
-    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
         crossorigin="anonymous"></script>
-
 </body>
 
 </html>

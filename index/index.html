@@ -23,6 +23,8 @@
     <!--
         hey why are you here pay attention to your classes
     -->
+    <iframe title="nav" src="..\nav\nav.html"
+        onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
     <div class="float-right ms-auto me-3 bg-light rounded-circle p-1">
         <a href="https://github.com/ML-10/baulkowebapp" target="_blank" class="d-inline-block" data-toggle="tooltip"
             data-placement="left" title="Contribute on Github">
@@ -30,10 +32,6 @@
         </a>
         </span>
     </div>
-
-    <div id="nav"></div>
-    <script src="../nav/nav.js">
-    </script>
 
     <div id="bg"></div>
     <span class="text-center d-flex justify-content-center">
@@ -60,12 +58,11 @@
     <p class="d-flex justify-content-center fs-6"><small>this is a small website please share with your friends</small>
     </p>
 
-    <div id="footer" class="footer">
-        <footer class="d-flex justify-content-center text-center">By Matthew Li 2021 :D</footer>
-        <footer class="d-flex justify-content-center text-center">Image credit to Hardy Huo</footer>
-        <footer class="d-flex justify-content-center text-center">This website is in no way affiliated with Baulkham
-            Hills High School.</footer>
-    </div>
+    <footer class="d-flex justify-content-center text-center">Image credit to Hardy Huo</footer>
+
+    <iframe title="footer" src="..\footer\footer.html"
+        onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
         crossorigin="anonymous"></script>

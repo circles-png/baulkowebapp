@@ -2,7 +2,7 @@ var belltimes = {
     "Monday":{
       "period":[
         "Start",
-        "check announcements",
+        "check gc",
         "Period 1",
         "Period 2",
         "Recess",
@@ -46,7 +46,7 @@ var belltimes = {
     "Tuesday":{
         "period":[
         "Start",
-        "check announcements",
+        "check gc",
         "Period 1",
         "Period 2",
         "Recess",
@@ -90,7 +90,7 @@ var belltimes = {
     "Wednesday":{
       "period":[
         "Start",
-        "check announcements",
+        "check gc",
         "Period 1",
         "Period 2",
         "Recess",
@@ -122,7 +122,7 @@ var belltimes = {
     "Thursday":{
       "period":[
         "Start",
-        "check announcements",
+        "check gc",
         "Period 1",
         "Period 2",
         "Recess",
@@ -166,7 +166,7 @@ var belltimes = {
     "Friday":{
        "period":[
         "Start",
-        "check announcements",
+        "check gc",
         "Period 1",
         "Period 2",
         "Recess",

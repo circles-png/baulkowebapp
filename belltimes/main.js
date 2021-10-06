@@ -5,7 +5,7 @@ var day = newday.getDay();
 var currentsec = newday.getHours() * 3600 + newday.getMinutes() * 60 + newday.getSeconds();
 var daydata;
 var numberofperiods;
-var table = "<table class='table my-5 fs-6 text-light rounded'><caption>Code by: Matthew Wu :3</caption>";
+var table = "<table class='table fs-6 text-light rounded'><caption class='mx-2'>Code by: Matthew Wu :3</caption>";
 var periodtimename = [];
 var theme = 0;
 var weekend = 1;
