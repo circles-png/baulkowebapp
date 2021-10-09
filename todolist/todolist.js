@@ -1,68 +1,66 @@
-$(document).ready(function () {
+let ulTasks = $('#ulTasks');
+let btnAdd = $('#btnAdd');
+let btnReset = $('#btnReset');
+let btnSort = $('#btnSort');
+let btnCleanup = $('#btnCleanup');
+let inpNewTask = $('#inpNewTask');
 
-    "use strict";
+ulTasks.attr("contenteditable", "true");
 
-    var todo = function () {
-        $('.todo-list .todo-item input').click(function () {
-            if ($(this).is(':checked')) {
-                $(this).parent().parent().parent().toggleClass('complete');
-            } else {
-                $(this).parent().parent().parent().toggleClass('complete');
-            }
-        });
+if (localStorage.getItem('page_html')) {
+    ulTasks.html(localStorage.getItem('page_html'));
+}
 
-        $('.todo-nav .all-task').click(function () {
-            $('.todo-list').removeClass('only-active');
-            $('.todo-list').removeClass('only-complete');
-            $('.todo-nav li.active').removeClass('active');
-            $(this).addClass('active');
-        });
+function reset() {
+    localStorage.clear();
+    window.location = window.location;
+}
 
-        $('.todo-nav .active-task').click(function () {
-            $('.todo-list').removeClass('only-complete');
-            $('.todo-list').addClass('only-active');
-            $('.todo-nav li.active').removeClass('active');
-            $(this).addClass('active');
-        });
-
-        $('.todo-nav .completed-task').click(function () {
-            $('.todo-list').removeClass('only-active');
-            $('.todo-list').addClass('only-complete');
-            $('.todo-nav li.active').removeClass('active');
-            $(this).addClass('active');
-        });
-
-        $('#uniform-all-complete input').click(function () {
-            if ($(this).is(':checked')) {
-                $('.todo-item .checker span:not(.checked) input').click();
-            } else {
-                $('.todo-item .checker span.checked input').click();
-            }
-        });
-
-        $('.remove-todo-item').click(function () {
-            $(this).parent().remove();
-        });
-    };
-
-    todo();
-
-    $(".add-task").keypress(function (e) {
-        if ((e.which == 13) && (!$(this).val().length == 0)) {
-            $('<div class="todo-item"><div class="checker"><span class=""><input type="checkbox"></span></div> <span>' + $(this).val() + '</span> <a href="javascript:void(0);" class="float-right remove-todo-item"><i class="icon-close"></i></a></div>').insertAfter('.todo-list .todo-item:last-child');
-            $(this).val('');
-        } else if (e.which == 13) {
-            alert('There\'s nothing in the task!');
-        }
-        $(document).on('.todo-list .todo-item.added input').click(function () {
-            if ($(this).is(':checked')) {
-                $(this).parent().parent().parent().toggleClass('complete');
-            } else {
-                $(this).parent().parent().parent().toggleClass('complete');
-            }
-        });
-        $('.todo-list .todo-item.added .remove-todo-item').click(function () {
-            $(this).parent().remove();
-        });
+function addItem() {
+    let listItem = $('<li>', {
+        'class': 'list-group-item bg-dark text-light p-3',
+        text: inpNewTask.val(),
+        onclick: "itemClick(this)"
     });
-});
+    ulTasks.append(listItem)
+    localStorage.setItem('page_html', ulTasks.html());
+    inpNewTask.val('');
+    toggleInputButtons();
+}
+
+function itemClick(self) {
+    $(self).toggleClass('done text-muted');
+    localStorage.setItem('page_html', $('#ulTasks').html());
+}
+
+function clearDone() {
+    $('#ulTasks .done').remove();
+    localStorage.setItem('page_html', $('#ulTasks').html());
+    toggleInputButtons();
+}
+
+function sortTasks() {
+    $('#ulTasks .done').appendTo(ulTasks);
+    localStorage.setItem('page_html', $('#ulTasks').html());
+}
+
+function toggleInputButtons() {
+    btnReset.prop('disabled', inpNewTask.val() == '');
+    btnAdd.prop('disabled', inpNewTask.val() == '');
+    btnSort.prop('disabled', ulTasks.children().length < 1);
+    btnCleanup.prop('disabled', ulTasks.children().length < 1);
+}
+
+toggleInputButtons();
+inpNewTask.keypress((e) => {
+    if (e.which === 13 && inpNewTask.val()) addItem();
+})
+inpNewTask.on('input', toggleInputButtons);
+
+btnAdd.click(addItem);
+btnReset.click(() => {
+    inpNewTask.val('');
+    toggleInputButtons();
+})
+btnCleanup.click(clearDone);
+btnSort.click(sortTasks);

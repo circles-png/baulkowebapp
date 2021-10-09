@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -12,12 +13,13 @@
     <link rel="stylesheet" href="todolist.css">
     <link rel="stylesheet" href="../global.css">
     <link rel="icon" href="../favicon.ico">
-    <script src="todolist.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/js/all.js"></script>
 
     <title>Baulko - To-do List</title>
 </head>
 
-<body class="d-flex flex-column">
+<body class="d-flex flex-column h-100">
 
     <span class="text-center d-flex justify-content-center">
         <h3 class="d-flex p-3 mt-3 rounded justify-content-center fs-1 text-light bg-dark text-center">
@@ -28,40 +30,52 @@
     <iframe title="nav" src="..\nav\nav.html"
         onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
 
-    <div class="container mt-4">
+    <div class="container h-100">
         <div class="row">
-            <div class="col-md-12">
-                <div class="card card-white bg-dark rounded-3">
-                    <div class="card-body bg-dark text-light">
-                        <form action="javascript:void(0);">
-                            <input type="text" class="form-control add-task" placeholder="New Task...">
-                        </form>
-                        <ul class="nav nav-pills todo-nav">
-                            <li role="presentation" class="nav-item all-task active"><a href="#"
-                                    class="nav-link">All</a>
-                            </li>
-                            <li role="presentation" class="nav-item active-task"><a href="#" class="nav-link">Active</a>
-                            </li>
-                            <li role="presentation" class="nav-item completed-task"><a href="#"
-                                    class="nav-link">Completed</a></li>
-                        </ul>
-                        <div class="todo-list">
-                            <div class="todo-item">
-                                <div class="checker"><span class=""><input type="checkbox"></span></div>
-                                <span>Add more tasks!</span>
-                                <a href="javascript:void(0);" class="float-right remove-todo-item">
-                                    <em class="icon-close"></em>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Input box -->
+            <div class="p-3">
+                <div class="form-group input-group-lg">
+                    <input type="text" class="form-control bg-dark border-0 text-light" id="inpNewTask"
+                        aria-describedby="newTaskHelp" placeholder="Add a new task...">
                 </div>
             </div>
-        </div>
-    </div>
 
-    <iframe title="footer" src="..\footer\footer.html"
-        onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+            <!--  Buttons -->
+            <div class="h-100">
+                <div class="row">
+                    <div class="col text-nowrap">
+                        <button class="btn btn-lg btn-success col w-100 p-md-3" disabled id="btnAdd">
+                            <em class="fas fa-plus-square"></em> Add
+                        </button>
+                    </div>
+                    <div class="col text-nowrap">
+                        <button class="btn btn-lg btn-danger col w-100 p-md-3" disabled id="btnReset">
+                            <em class="fas fa-backspace"></em> Reset
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-nowrap mt-4">
+                        <button class="btn btn-lg btn-info col w-100 p-md-3" disabled id="btnSort">
+                            <em class="fas fa-sort-amount-down"></em> Sort
+                        </button>
+                    </div>
+                    <div class="col text-nowrap mt-4">
+                        <button class="btn btn-lg btn-warning col w-100 p-md-3" disabled id="btnCleanup">
+                            <em class="fas fa-trash-alt"></em> Cleanup
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Task List -->
+
+        <ul class="row list-group text-light my-4 mx-3" id="ulTasks">
+        </ul>
+    </div>
+    <script src="todolist.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
