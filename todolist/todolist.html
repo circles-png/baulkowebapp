@@ -16,6 +16,8 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/js/all.js"></script>
 
+    <script src="../popover.js"></script>
+
     <title>Baulko - To-do List</title>
 </head>
 
@@ -43,24 +45,28 @@
             <!--  Buttons -->
             <div class="h-100">
                 <div class="row">
-                    <div class="col text-nowrap">
+                    <div class="col text-nowrap my-2" data-toggle="tooltip" data-trigger="hover" data-placement="top"
+                        title="Add task">
                         <button class="btn btn-lg btn-success col w-100 p-md-3" disabled id="btnAdd">
                             <em class="fas fa-plus-square"></em> Add
                         </button>
                     </div>
-                    <div class="col text-nowrap">
+                    <div class="col text-nowrap my-2" data-toggle="tooltip" data-trigger="hover" data-placement="top"
+                        title="Reset input">
                         <button class="btn btn-lg btn-danger col w-100 p-md-3" disabled id="btnReset">
                             <em class="fas fa-backspace"></em> Reset
                         </button>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col text-nowrap mt-4">
+                    <div class="col text-nowrap my-2" data-toggle="tooltip" data-trigger="hover" data-placement="top"
+                        title="Sort tasks">
                         <button class="btn btn-lg btn-info col w-100 p-md-3" disabled id="btnSort">
                             <em class="fas fa-sort-amount-down"></em> Sort
                         </button>
                     </div>
-                    <div class="col text-nowrap mt-4">
+                    <div class="col text-nowrap my-2" data-toggle="tooltip" data-trigger="hover" data-placement="top"
+                        title="Remove completed">
                         <button class="btn btn-lg btn-warning col w-100 p-md-3" disabled id="btnCleanup">
                             <em class="fas fa-trash-alt"></em> Cleanup
                         </button>

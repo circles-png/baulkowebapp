@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../global.css">
     <link rel="icon" href="../favicon.ico">
     <script src="konami.js"></script>
-    <script src="index.js"></script>
+    <script src="../popover.js"></script>
 
     <title>Baulko - Home</title>
 </head>
@@ -25,9 +25,9 @@
     -->
     <iframe title="nav" src="..\nav\nav.html"
         onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
-    <div class="float-right ms-auto me-3 bg-light rounded-circle p-1">
+    <div class="float-right ms-auto m-3 bg-light rounded-circle p-1">
         <a href="https://github.com/ML-10/baulkowebapp" target="_blank" class="d-inline-block" data-toggle="tooltip"
-            data-placement="left" title="Contribute on Github">
+            data-placement="left" title="Contribute on Github" data-trigger="hover">
             <img src="../images/GitHub/GitHub-Mark-32px.png" class="img-fluid" alt="GitHub">
         </a>
         </span>
@@ -55,18 +55,14 @@
             href="https://web3.baulkham-h.schools.nsw.edu.au/portal2/#!/login" target="_blank">Sentral Portal</a>
     </ul>
 
-    <p class="d-flex justify-content-center fs-6"><small>this is a small website please share with your friends</small>
-    </p>
-
-    <footer class="d-flex justify-content-center text-center">Image credit to Hardy Huo</footer>
-
+    <div class="m-5"></div>
+    
     <iframe title="footer" src="..\footer\footer.html"
         onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
         crossorigin="anonymous"></script>
-
 </body>
 
 </html>
