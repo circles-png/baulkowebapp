@@ -6,7 +6,7 @@
 # For more information on Codacy Analysis CLI in general, see
 # https://github.com/codacy/codacy-analysis-cli.
 
-name: Codacy Security Scan
+name: Baulko Web App Workflow
 
 on:
   push:
@@ -45,3 +45,12 @@ jobs:
         uses: github/codeql-action/upload-sarif@v1
         with:
           sarif_file: results.sarif
+      
+      - name: Changelog CI
+        # You may pin to the exact commit or the version.
+        # uses: saadmk11/changelog-ci@ccdb57a5cf4736b21f3c0b5beaeb4c31d66ce242
+        uses: saadmk11/changelog-ci@v0.8.0
+        with:
+          # Name of the changelog file if not provided defaults to CHANGELOG.md
+          changelog_filename: CHANGELOG.md
+
