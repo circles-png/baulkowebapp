@@ -10,10 +10,10 @@ name: Baulko Web App Workflow
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
     # The branches below must be a subset of the branches above
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   codacy-security-scan:
@@ -45,13 +45,3 @@ jobs:
         uses: github/codeql-action/upload-sarif@v1
         with:
           sarif_file: results.sarif
-      
-      - name: Changelog CI
-        # You may pin to the exact commit or the version.
-        # uses: saadmk11/changelog-ci@ccdb57a5cf4736b21f3c0b5beaeb4c31d66ce242
-        uses: saadmk11/changelog-ci@v0.8.0
-        with:
-          # Name of the changelog file if not provided defaults to CHANGELOG.md
-          changelog_filename: CHANGELOG.md
-          config_file: changelog-ci-config.json
-
