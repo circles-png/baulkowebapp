@@ -17,7 +17,7 @@ var keyHandler = function (event) {
 
     if (pattern.length === current) {
         current = 0;
-        window.location = "tetris/tetris.html";
+        window.location = "../tetris/tetris.html";
     }
 };
 
