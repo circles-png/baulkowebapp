@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../global.css">
+    <link rel="icon" href="../favicon.ico">
+
+    <title>Baulko - Bell Times</title>
+</head>
+
+<body class="d-flex flex-column">
+    <iframe title="nav" src="..\nav\nav.html"
+        onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+
+    <span class="text-center d-flex justify-content-center">
+        <h1 class="d-flex p-3 my-5 rounded justify-content-center fs-1 text-light bg-dark text-center">
+            Bell Times
+        </h1>
+    </span>
+    <div class="tableclass rounded-3 mx-4 bg-dark text-light" id="tableclass"></div>
+    <table class="tablenojs">
+        <tbody>
+            <tr>
+                <th></th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Period</th>
+            </tr>
+            <tr>
+                <th>Bell Warning</th>
+                <td>8:38 am</td>
+                <td>8:38 am</td>
+                <td>8:38 am</td>
+                <td>8:38 am</td>
+                <td>8:38 am</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Roll call</th>
+                <td>Roll Assembly 8:40 am to 8:44 am</td>
+                <td>Roll 8:40 am</td>
+                <td>Roll 8:40 am</td>
+                <td>Roll 8:40 am</td>
+                <td>Roll 8:40 am</td>
+                <td>Roll</td>
+            </tr>
+            <tr>
+                <th>1</th>
+                <td>Period 1 - 9:18 am</td>
+                <td>Period 1 - 8:44 am</td>
+                <td>Period 1 - 8:44 am</td>
+                <td>Period 1 - 8:44 am</td>
+                <td>Period 1 - 8:44 am</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td>Period 2 - 9:54 am</td>
+                <td>Period 2 - 9:26 am</td>
+                <td>Period 2 - 9:23 am</td>
+                <td>Period 2 - 9:26 am</td>
+                <td>Period 2 - 9:23 am</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <th>RECESS</th>
+                <td>10:30 am</td>
+                <td>10:06 am</td>
+                <td>9:59 am</td>
+                <td>10:06 am</td>
+                <td>10:01 am</td>
+                <td>Recess</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td>10:50 am</td>
+                <td>10:26 am</td>
+                <td>10:14 am</td>
+                <td>10:26 am</td>
+                <td>10:26 am</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td>11:26 am</td>
+                <td>11:06 am</td>
+                <td>10:51 am</td>
+                <td>11:06 am</td>
+                <td>11:06 am</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <th>Break</th>
+                <td>12:02 pm</td>
+                <td>11:46 am</td>
+                <td>No Break</td>
+                <td>11:46 am</td>
+                <td>11:46 am</td>
+                <td>Break</td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td>12:07 pm</td>
+                <td>11:51 am</td>
+                <td>11:28 am</td>
+                <td>11:51 am</td>
+                <td>11:51 am</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td>12:43 pm</td>
+                <td>12:31 pm</td>
+                <td>Sport 12:30 pm</td>
+                <td>12:31 pm</td>
+                <td>12:31 pm</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <th>Lunch 1</th>
+                <td>1:19 pm</td>
+                <td>1:11 pm</td>
+                <td>12:05 pm</td>
+                <td>1:11 pm</td>
+                <td>1:11 pm</td>
+                <td>Lunch 1</td>
+            </tr>
+            <tr>
+                <th>Lunch 2</th>
+                <td>1:37 pm</td>
+                <td>1:29 pm</td>
+                <td>12:20 pm</td>
+                <td>1:29 pm</td>
+                <td>1:29 pm</td>
+                <td>Lunch 2</td>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td>1:54 pm</td>
+                <td>1:46 pm</td>
+                <td>Period 6 12:31 pm, Period 7 1:11 pm</td>
+                <td>1:46 pm</td>
+                <td>1:46 pm</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <th>8</th>
+                <td>2:30 pm</td>
+                <td>2:26 pm</td>
+                <td>Period 8 1:50 pm</td>
+                <td>2:26 pm</td>
+                <td>2:26 pm</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <th>End</th>
+                <td>3:06 pm</td>
+                <td>3:06 pm</td>
+                <td>2:30 pm</td>
+                <td>3:06 pm</td>
+                <td>3:06 pm</td>
+                <td>End</td>
+            </tr>
+        </tbody>
+    </table>
+
+    
+    <script src="belltimes.js">
+    </script>
+    <script src="main.js">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

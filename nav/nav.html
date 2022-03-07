@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand text-center d-flex" href="">
+            <h1 id='baulko' class='display-5 ps-3 d-flex align-self-center'>
+                Baulko
+            </h1>
+            <img src="../images/untitled.png" alt="Baulko Logo" id='orange' class="m-2 d-none d-sm-block">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse navbarCollapse">
+            <hr class="w-100 border border-light d-block d-md-none" />
+            <div class="d-flex justify-content-center">
+                <ul class="list-group w-100 list-group-horizontal-md text-center px-5" id="navLinks">
+                    <li class="text-light list-group-item p-3 fs-5 bg-dark text-nowrap" style="cursor: pointer" id="indexLink"
+                        onclick="location.href='../index/index.html';"> Home </li>
+                    <li class="text-light list-group-item active p-3 fs-5 text-nowrap" id="indexActive">Home</li>
+
+                    <li class="text-light list-group-item p-3 fs-5 bg-dark text-nowrap" style="cursor: pointer" id="timesLink"
+                        onclick="location.href='../belltimes/times.html';"> Bell Times </li>
+                    <li class="text-light list-group-item active p-3 fs-5 text-nowrap" id="timesActive">Bell Times</li>
+
+                    <li class="text-light list-group-item p-3 fs-5 bg-dark text-nowrap" style="cursor: pointer" id="feedbackLink"
+                        onclick="location.href='../feedback/feedback.html';"> Feedback </li>
+                    <li class="text-light list-group-item active p-3 fs-5 text-nowrap" id="feedbackActive">Feedback</li>
+
+                    <li class="text-light list-group-item p-3 fs-5 bg-dark text-nowrap" style="cursor: pointer" id="todolistLink"
+                        onclick="location.href='../todolist/todolist.html';"> To-Do List </li>
+                    <li class="text-light list-group-item active p-3 fs-5 text-nowrap" id="todolistActive">To-Do List
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="nav.js"></script>
