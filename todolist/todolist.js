@@ -5,15 +5,13 @@ let btnSort = $('#btnSort');
 let btnCleanup = $('#btnCleanup');
 let inpNewTask = $('#inpNewTask');
 
-ulTasks.attr("contenteditable", "true");
-
 if (localStorage.getItem('page_html')) {
     ulTasks.html(localStorage.getItem('page_html'));
 }
 
 function reset() {
     localStorage.clear();
-    window.location = window.location;
+    location.reload();
 }
 
 function addItem() {
@@ -64,3 +62,5 @@ btnReset.click(() => {
 })
 btnCleanup.click(clearDone);
 btnSort.click(sortTasks);
+
+ulTasks.attr('contenteditable', 'false')
