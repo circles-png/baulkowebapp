@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="../jquery-3.6.0.min.js"></script>
+    <link href="../bootstrap/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="todolist.css">
     <link rel="stylesheet" href="../global.css">
     <link rel="icon" href="../favicon.ico">
@@ -34,7 +32,6 @@
 
     <div class="container h-100">
         <div class="row">
-            <!-- Input box -->
             <div class="p-3">
                 <div class="form-group input-group-lg">
                     <input type="text" class="form-control bg-dark border-0 text-light" id="inpNewTask"
@@ -42,7 +39,6 @@
                 </div>
             </div>
 
-            <!--  Buttons -->
             <div class="h-100">
                 <div class="row">
                     <div class="col text-nowrap my-2" data-toggle="tooltip" data-trigger="hover" data-placement="top"
@@ -76,16 +72,13 @@
             </div>
         </div>
 
-        <!-- Task List -->
 
         <ul class="row list-group text-light my-4 mx-3" id="ulTasks">
         </ul>
     </div>
     <script src="todolist.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-        crossorigin="anonymous"></script>
+    <script src="../bootstrap/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
