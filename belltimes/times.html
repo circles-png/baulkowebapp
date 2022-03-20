@@ -13,166 +13,178 @@
     <title>Baulko - Bell Times</title>
 </head>
 
-<body class="d-flex flex-column">
-    <iframe title="nav" src="..\nav\nav.html"
-        onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+<body class="d-flex flex-column bg-secondary py-0">
 
-    <span class="text-center d-flex justify-content-center">
-        <h1 class="d-flex p-3 my-5 rounded justify-content-center fs-1 text-light bg-dark text-center">
-            Bell Times
-        </h1>
-    </span>
-    <div class="tableclass rounded-3 mx-4 bg-dark text-light" id="tableclass"></div>
-    <table class="tablenojs">
-        <tbody>
-            <tr>
-                <th></th>
-                <th>Monday</th>
-                <th>Tuesday</th>
-                <th>Wednesday</th>
-                <th>Thursday</th>
-                <th>Friday</th>
-                <th>Period</th>
-            </tr>
-            <tr>
-                <th>Bell Warning</th>
-                <td>8:38 am</td>
-                <td>8:38 am</td>
-                <td>8:38 am</td>
-                <td>8:38 am</td>
-                <td>8:38 am</td>
-                <td></td>
-            </tr>
-            <tr>
-                <th>Roll call</th>
-                <td>Roll Assembly 8:40 am to 8:44 am</td>
-                <td>Roll 8:40 am</td>
-                <td>Roll 8:40 am</td>
-                <td>Roll 8:40 am</td>
-                <td>Roll 8:40 am</td>
-                <td>Roll</td>
-            </tr>
-            <tr>
-                <th>1</th>
-                <td>Period 1 - 9:18 am</td>
-                <td>Period 1 - 8:44 am</td>
-                <td>Period 1 - 8:44 am</td>
-                <td>Period 1 - 8:44 am</td>
-                <td>Period 1 - 8:44 am</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <th>2</th>
-                <td>Period 2 - 9:54 am</td>
-                <td>Period 2 - 9:26 am</td>
-                <td>Period 2 - 9:23 am</td>
-                <td>Period 2 - 9:26 am</td>
-                <td>Period 2 - 9:23 am</td>
-                <td>2</td>
-            </tr>
-            <tr>
-                <th>RECESS</th>
-                <td>10:30 am</td>
-                <td>10:06 am</td>
-                <td>9:59 am</td>
-                <td>10:06 am</td>
-                <td>10:01 am</td>
-                <td>Recess</td>
-            </tr>
-            <tr>
-                <th>3</th>
-                <td>10:50 am</td>
-                <td>10:26 am</td>
-                <td>10:14 am</td>
-                <td>10:26 am</td>
-                <td>10:26 am</td>
-                <td>3</td>
-            </tr>
-            <tr>
-                <th>4</th>
-                <td>11:26 am</td>
-                <td>11:06 am</td>
-                <td>10:51 am</td>
-                <td>11:06 am</td>
-                <td>11:06 am</td>
-                <td>4</td>
-            </tr>
-            <tr>
-                <th>Break</th>
-                <td>12:02 pm</td>
-                <td>11:46 am</td>
-                <td>No Break</td>
-                <td>11:46 am</td>
-                <td>11:46 am</td>
-                <td>Break</td>
-            </tr>
-            <tr>
-                <th>5</th>
-                <td>12:07 pm</td>
-                <td>11:51 am</td>
-                <td>11:28 am</td>
-                <td>11:51 am</td>
-                <td>11:51 am</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <th>6</th>
-                <td>12:43 pm</td>
-                <td>12:31 pm</td>
-                <td>Sport 12:30 pm</td>
-                <td>12:31 pm</td>
-                <td>12:31 pm</td>
-                <td>6</td>
-            </tr>
-            <tr>
-                <th>Lunch 1</th>
-                <td>1:19 pm</td>
-                <td>1:11 pm</td>
-                <td>12:05 pm</td>
-                <td>1:11 pm</td>
-                <td>1:11 pm</td>
-                <td>Lunch 1</td>
-            </tr>
-            <tr>
-                <th>Lunch 2</th>
-                <td>1:37 pm</td>
-                <td>1:29 pm</td>
-                <td>12:20 pm</td>
-                <td>1:29 pm</td>
-                <td>1:29 pm</td>
-                <td>Lunch 2</td>
-            </tr>
-            <tr>
-                <th>7</th>
-                <td>1:54 pm</td>
-                <td>1:46 pm</td>
-                <td>Period 6 12:31 pm, Period 7 1:11 pm</td>
-                <td>1:46 pm</td>
-                <td>1:46 pm</td>
-                <td>7</td>
-            </tr>
-            <tr>
-                <th>8</th>
-                <td>2:30 pm</td>
-                <td>2:26 pm</td>
-                <td>Period 8 1:50 pm</td>
-                <td>2:26 pm</td>
-                <td>2:26 pm</td>
-                <td>8</td>
-            </tr>
-            <tr>
-                <th>End</th>
-                <td>3:06 pm</td>
-                <td>3:06 pm</td>
-                <td>2:30 pm</td>
-                <td>3:06 pm</td>
-                <td>3:06 pm</td>
-                <td>End</td>
-            </tr>
-        </tbody>
-    </table>
+    <header class="py-4">
+        <div>
+            <nav class="nav nav-masthead justify-content-center">
+                <a class="nav-link" href="../index/index.html">Home</a>
+                <a class="nav-link" href="../links/links.html">Links and Updates</a>
+                <a class="nav-link active" href>Bell Times</a>
+                <a class="nav-link" href="../todolist/todolist.html">To-Do List</a>
+                <a class="nav-link" href="../feedback/feedback.html">Feedback</a>
+            </nav>
+        </div>
+    </header>
 
-    
+    <main class="d-flex flex-column">
+        <span class="text-center">
+            <h1 class="d-flex p-3 my-5 rounded justify-content-center fs-1 text-light text-center">
+                Bell Times
+            </h1>
+        </span>
+        <div class="tableclass rounded-3 mx-4 bg-dark text-light" id="tableclass"></div>
+        <table class="tablenojs">
+            <tbody>
+                <tr>
+                    <th></th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Period</th>
+                </tr>
+                <tr>
+                    <th>Bell Warning</th>
+                    <td>8:38 am</td>
+                    <td>8:38 am</td>
+                    <td>8:38 am</td>
+                    <td>8:38 am</td>
+                    <td>8:38 am</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Roll call</th>
+                    <td>Roll Assembly 8:40 am to 8:44 am</td>
+                    <td>Roll 8:40 am</td>
+                    <td>Roll 8:40 am</td>
+                    <td>Roll 8:40 am</td>
+                    <td>Roll 8:40 am</td>
+                    <td>Roll</td>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <td>Period 1 - 9:18 am</td>
+                    <td>Period 1 - 8:44 am</td>
+                    <td>Period 1 - 8:44 am</td>
+                    <td>Period 1 - 8:44 am</td>
+                    <td>Period 1 - 8:44 am</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>Period 2 - 9:54 am</td>
+                    <td>Period 2 - 9:26 am</td>
+                    <td>Period 2 - 9:23 am</td>
+                    <td>Period 2 - 9:26 am</td>
+                    <td>Period 2 - 9:23 am</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <th>RECESS</th>
+                    <td>10:30 am</td>
+                    <td>10:06 am</td>
+                    <td>9:59 am</td>
+                    <td>10:06 am</td>
+                    <td>10:01 am</td>
+                    <td>Recess</td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td>10:50 am</td>
+                    <td>10:26 am</td>
+                    <td>10:14 am</td>
+                    <td>10:26 am</td>
+                    <td>10:26 am</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <th>4</th>
+                    <td>11:26 am</td>
+                    <td>11:06 am</td>
+                    <td>10:51 am</td>
+                    <td>11:06 am</td>
+                    <td>11:06 am</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <th>Break</th>
+                    <td>12:02 pm</td>
+                    <td>11:46 am</td>
+                    <td>No Break</td>
+                    <td>11:46 am</td>
+                    <td>11:46 am</td>
+                    <td>Break</td>
+                </tr>
+                <tr>
+                    <th>5</th>
+                    <td>12:07 pm</td>
+                    <td>11:51 am</td>
+                    <td>11:28 am</td>
+                    <td>11:51 am</td>
+                    <td>11:51 am</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <th>6</th>
+                    <td>12:43 pm</td>
+                    <td>12:31 pm</td>
+                    <td>Sport 12:30 pm</td>
+                    <td>12:31 pm</td>
+                    <td>12:31 pm</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <th>Lunch 1</th>
+                    <td>1:19 pm</td>
+                    <td>1:11 pm</td>
+                    <td>12:05 pm</td>
+                    <td>1:11 pm</td>
+                    <td>1:11 pm</td>
+                    <td>Lunch 1</td>
+                </tr>
+                <tr>
+                    <th>Lunch 2</th>
+                    <td>1:37 pm</td>
+                    <td>1:29 pm</td>
+                    <td>12:20 pm</td>
+                    <td>1:29 pm</td>
+                    <td>1:29 pm</td>
+                    <td>Lunch 2</td>
+                </tr>
+                <tr>
+                    <th>7</th>
+                    <td>1:54 pm</td>
+                    <td>1:46 pm</td>
+                    <td>Period 6 12:31 pm, Period 7 1:11 pm</td>
+                    <td>1:46 pm</td>
+                    <td>1:46 pm</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <th>8</th>
+                    <td>2:30 pm</td>
+                    <td>2:26 pm</td>
+                    <td>Period 8 1:50 pm</td>
+                    <td>2:26 pm</td>
+                    <td>2:26 pm</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <th>End</th>
+                    <td>3:06 pm</td>
+                    <td>3:06 pm</td>
+                    <td>2:30 pm</td>
+                    <td>3:06 pm</td>
+                    <td>3:06 pm</td>
+                    <td>End</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+
     <script src="belltimes.js">
     </script>
     <script src="main.js">

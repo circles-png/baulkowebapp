@@ -19,16 +19,24 @@
     <title>Baulko - To-do List</title>
 </head>
 
-<body class="d-flex flex-column h-100">
+<body class="d-flex flex-column h-100 bg-secondary pt-3">
+    <header class="py-4">
+        <div>
+            <nav class="nav nav-masthead justify-content-center">
+                <a class="nav-link" href="../index/index.html">Home</a>
+                <a class="nav-link" href="../links/links.html">Links and Updates</a>
+                <a class="nav-link" href="../belltimes/times.html">Bell Times</a>
+                <a class="nav-link active" href>To-Do List</a>
+                <a class="nav-link" href="../feedback/feedback.html">Feedback</a>
+            </nav>
+        </div>
+    </header>
 
     <span class="text-center d-flex justify-content-center">
         <h3 class="d-flex p-3 mt-3 rounded justify-content-center fs-1 text-light bg-dark text-center">
             To-do List
         </h3>
     </span>
-
-    <iframe title="nav" src="..\nav\nav.html"
-        onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
 
     <div class="container h-100">
         <div class="row">

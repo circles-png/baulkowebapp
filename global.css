@@ -1,15 +1,10 @@
 body {
     padding-top: 150px;
     position: static;
-    background-image: url("images/court_image.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    overflow-x: hidden;
-    backface-visibility: hidden;
 }
 
 html {
@@ -30,15 +25,6 @@ img#orange {
     text-shadow: none;
 }
 
-body {
-    background-image: url("../images/court_image.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    box-shadow: inset 0 0 100vmax 100vmax rgba(0, 0, 0, 0.2);
-}
 
 .cover-container {
     max-width: 42em;
@@ -66,10 +52,6 @@ body {
     border-bottom-color: #fff;
 }
 
-body {
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
-}
 
 html {
     height: -webkit-fill-available;
