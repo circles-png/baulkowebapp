@@ -1,11 +1,11 @@
-/* global belltimes */ 
+/* global belltimes */
 
 var newday = new Date();
 var day = newday.getDay();
 var currentsec = newday.getHours() * 3600 + newday.getMinutes() * 60 + newday.getSeconds();
 var daydata;
 var numberofperiods;
-var table = "<table class='table fs-6 text-light rounded'><caption class='mx-2'>Code by: Matthew Wu :3</caption>";
+var table = "<table class='table fs-4 text-light'><caption class='mx-2'>Code by: Matthew Wu :3</caption>";
 var periodtimename = [];
 var theme = 0;
 var weekend = 1;
@@ -141,7 +141,7 @@ function updateprogress() {
         }
         for (var a = 0; a < daydata.period.length - 2; a++) {
             if (currentsec > (daydata.times[2 * a + 1] * 60)) {
-                document.getElementsByClassName("progresstext")[a + 1].innerHTML = "period finished!";
+                document.getElementsByClassName("progresstext")[a + 1].innerHTML = "Period finished!";
             }
             else if (currentsec < (daydata.times[2 * a] * 60)) {
                 document.getElementsByClassName("progresstext")[a + 1].innerHTML = "";
@@ -162,10 +162,10 @@ function updateprogress() {
             }
         }
         else {
-            document.getElementsByClassName("progresstext")[0].innerHTML = "not even school yet";
+            document.getElementsByClassName("progresstext")[0].innerHTML = "Not even school yet...";
         }
         if (currentsec > (daydata.times[daydata.period.length - 1] * 60)) {
-            document.getElementsByClassName("progresstext")[daydata.period.length - 1].innerHTML = "school ended";
+            document.getElementsByClassName("progresstext")[daydata.period.length - 1].innerHTML = "School ended";
         }
         else {
             document.getElementsByClassName("progresstext")[daydata.period.length - 1].innerHTML = "";
@@ -196,4 +196,3 @@ writetotable();
 updateprogress();
 
 var updatetime = setInterval(update, 1000);
-
